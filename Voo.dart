@@ -8,11 +8,11 @@ class Voo {
   String destino;
   String origem;
   String portaoEmbarque;
-  Companhia? companhia = null;
+  Companhia? companhia;
 
   //CONSTRUTOR VERSAO OTIMIZADA
   Voo(this.data, this.horario, this._numero, this.destino, this.origem,
-      this.portaoEmbarque);
+      this.portaoEmbarque, this.companhia);
 
   String getData() {
     return data;
