@@ -9,16 +9,20 @@ void main() {
   List<Companhia> listaCompanhia = [];
 
   Infraero infraero = Infraero();
-  infraero.CadastroDeAeroportos(listaAeroporto,
-      Aeroporto("Lisyas Rodrigues", "PMW", "PALMAS", "TO", "BRASIL"));
+
   //INSTANCIA OBJETOS DE COMPANHIA
   infraero.CadastroDeCompanhias(listaCompanhia, Companhia("TAM", 6));
   infraero.CadastroDeCompanhias(listaCompanhia, Companhia("GOL", 2));
   infraero.CadastroDeCompanhias(listaCompanhia, Companhia("AZUL", 8));
 
+  infraero.CadastroDeAeroportos(listaAeroporto,
+      Aeroporto("Lisyas Rodrigues", "PMW", "PALMAS", "TO", "BRASIL"));
   //CRIA VOOS\
-  infraero.CadastroDeVoos(listaAeroporto, listaVoo,
-      Voo("10/10/2021", "10:10", 4020, "RIO DE JANEIRO", "BRASILIA", "32B"));
+  infraero.CadastroDeVoos(
+      listaAeroporto,
+      listaVoo,
+      Voo("10/10/2021", "10:10", 4020, "RIO DE JANEIRO", "BRASILIA", "32B",
+          Companhia("TAM", 6)));
 
   // Voo palmasPOA = Voo("10/10/2021", "10:10", 4020, "SAO PAULO", "32B");
   // palmasPOA.companhia = GOL;
